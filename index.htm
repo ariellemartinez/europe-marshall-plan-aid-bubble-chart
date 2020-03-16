@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Highcharts Example</title>
+<style type="text/css">
+#container {
+    height: 100%;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/exporting.js"></script> 
+<script src="https://world101.cfr.org/themes/custom/world101_bootstrap/components/asset-map-chart/chart/vendors/highchart-cfr-theme.js"></script>
+<div id="container"></div>
+<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble'
+    },
+    title: {
+        text: "Top Recipients of U.S. Economic Aid in Europe, 1948–1952",
+		style: {
+      	fontFamily: '"Larsseit", sans-serif',
+      	color: '#04284a',
+      	fontSize: '30px',
+      	opacity: 1
+    	}
+    },
+	credits: {
+    	href: 'https://explorer.usaid.gov/',
+    	text: 'Source: USAID.',
+    	style: {
+      		display: 'block'
+    	}
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '${point.value} billion'
+    },
+	legend: {
+		enabled: false
+	},
+    plotOptions: {
+        packedbubble: {
+            maxSize: '120%',
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }
+    },
+    colors: ['#4391DB', '#F25D27', '#5c6b40', '#aa2800', '#3f6d6b',
+    '#773863', '#b5a06d', '#A1A3A1', '#668296', '#f9b832'],
+    series: [
+		{
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [ {
+            name: "Germany",
+            value: 27.60
+        }]}, {
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [{
+            name: 'United Kingdom',
+            value: 26.04
+        }]}, {
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [{
+            name: 'France',
+            value: 25.19
+        }]},
+        {
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [{
+            name: "Italy",
+            value: 15.14
+        }]},
+			 {
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [{
+            name: "Netherlands",
+            value: 8.10
+        }]},
+       {
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [{
+            name: "Greece",
+            value: 7.03
+        }]},{
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [ {
+            name: "Austria",
+            value: 6.87
+        }]},
+        {
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [{
+            name: "Belgium",
+            value: 4.61
+        }]}, 
+        {
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [{
+            name: "Denmark",
+            value: 2.23
+        }]},
+        {
+        name: 'U.S. economic aid (constant 2016 US$)',
+        data: [{
+            name: "Norway",
+            value: 2.09
+        }]}]
+});
+</script>
+</body>
+</html>
